@@ -138,6 +138,31 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
 
 **[Back to top](#table-of-contents)**
 
+## Named Controllers
+
+  Use named controllers instead of anonymous functions. Why named controllers?
+
+   * Easier to debug
+   * Creates more readable code
+
+  Also, be sure to append the controller name with the suffix Controller. This is a good practice that is commonly used and is descriptive.
+
+  ```javascript
+    function PeopleCardController() {
+      var c = this;
+    }
+  ```
+
+  Try to avoid this if possible, despite the fact that every time you create a new widget the platform provides you with an anonymous function by default.
+
+  ```javascript
+  function() {
+    var c = this;
+  }
+  ```
+
+**[Back to top](#table-of-contents)**
+
 ## File Naming
 
   Keep it simple by going lowercase with dashes. Use the feature or widget to name the file, separated by a period with the file type following it and ending with the file extension.
