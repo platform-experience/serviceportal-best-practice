@@ -191,7 +191,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
 
 ## Bindable Members at Top
 
-  Place bindable members at the top of the context in alphabetical order. This makes it easy to read and at a glance you know exactly where to locate functions.
+  Place bindable members at the top of the context in alphabetical order. This makes it easy to read and at a glance you know exactly which members are bound to the view and where to find the implementation details.
 
   ```javascript
   function FeedbackCardController() {
