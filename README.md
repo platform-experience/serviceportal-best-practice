@@ -55,7 +55,7 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
 ## Components
 
-  Angular 1.5 brings the new .component() helper method, which allows developers to write in an Angular 2 style and make upgrading to Angular 2 an easier task. Here are the advantages from the Angular documentation:
+  Angular 1.5 brings the new .component() helper method, which allows developers to write in an Angular 2 style and makes upgrading to Angular 2 an easier task. Here are the advantages from the Angular documentation:
 
   * simpler configuration than plain directives
   * promote sane defaults and best practices
@@ -143,7 +143,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
    * eliminates having to inject $scope as a dependency
    * $scope is phased out in Angular 2 and beyond
 
-  The great thing is every time you create a new widget the platform provides this syntax for you by default.
+  Every time you create a new widget the platform provides this syntax for you by default, which is nice.
 
   ```javascript
   function() {
@@ -218,10 +218,16 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
    * reduces repetitive controller logic
    * ideal for uniting testing and mocking
 
-   This is good.
+   Create a service and simply inject it into the controller.
 
   ```javascript
+  function TimelineController(eventsService) {
+    var c = this;
 
+    c.$onInit = function() {
+      c.initialEvents = eventsService.getInitialEvents();
+    };
+  }
   ```
 
   Read more on the topic, from the man John Papa.
