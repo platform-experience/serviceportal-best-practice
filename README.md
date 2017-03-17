@@ -13,11 +13,11 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   1. [Components](#components)
   1. [$onInit](#oninit)
   1. [One-way Binding](#one-way-binding)
-  1. [Bindable Members At Top](#bindable-members-at-top)
-  1. [ControllerAs Syntax](#controller-as-syntax)
   1. [Defer Logic to Services](#defer-logic-to-services)
   1. [Single Responsibility](#single-responsibility)
   1. [Named Controllers](#named-controllers)
+  1. [ControllerAs Syntax](#controller-as-syntax)
+  1. [Bindable Members At Top](#bindable-members-at-top)
   1. [File Naming](#file-naming)
   1. [Linting](#linting)
 
@@ -142,8 +142,8 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
 
   Use named controllers instead of anonymous functions. Why named controllers?
 
-   * Easier to debug
-   * Creates more readable code
+   * easier to debug
+   * creates more readable code
 
   Also, be sure to append the controller name with the suffix Controller. This is a good practice that is commonly used and is descriptive.
 
