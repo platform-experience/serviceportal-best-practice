@@ -16,10 +16,8 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   1. [Named Controllers](#named-controllers)
   1. [Controller as Syntax](#controller-as-syntax)
   1. [Bindable Members at Top](#bindable-members-at-top)
-  1. [File Naming](#file-naming)
   1. [Defer Logic to Services](#defer-logic-to-services)
-  1. [Single Responsibility](#single-responsibility)
-  1. [Linting](#linting)
+  1. [File Naming](#file-naming)
 
 ## IIFE
 
@@ -156,7 +154,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
 
   Try to avoid this, if possible.
 
-    ```javascript
+  ```javascript
   function($scope) {
     $scope.isVisible = true;
   }
@@ -211,9 +209,34 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
 
 **[Back to top](#table-of-contents)**
 
+## Defer Logic to Services
+
+  Defer controller logic to services or factories. Why you say?
+
+   * keeps the controller focused and lean
+   * promotes reuse via dependency injection
+   * reduces repetitive controller logic
+   * ideal for uniting testing and mocking
+
+   This is good.
+
+  ```javascript
+
+  ```
+
+  Read more on the topic, from the man John Papa.
+
+  [https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#defer-controller-logic-to-services](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#defer-controller-logic-to-services)
+
+**[Back to top](#table-of-contents)**
+
 ## File Naming
 
-  Keep it simple by going lowercase with dashes. Use the feature or widget to name the file, separated by a period with the file type following it and ending with the file extension.
+  Keep it simple by going lowercase with dashes. Use the feature or widget to name the file, separated by a period with the file type following it and ending with the file extension. Why?
+
+   * consistency
+   * makes finding your code faster
+   * ease of understanding
 
   Here are a list of examples.
 
@@ -229,7 +252,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
   people-card.scss
   ```
 
-  Read more on the topic, from the man John Papa.
+  Read more on the topic, from Mr. Papa.
 
   [https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#naming](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#naming)
 
