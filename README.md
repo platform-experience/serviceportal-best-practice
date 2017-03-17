@@ -13,12 +13,12 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   1. [Components](#components)
   1. [$onInit](#oninit)
   1. [One-way Binding](#one-way-binding)
-  1. [Defer Logic to Services](#defer-logic-to-services)
-  1. [Single Responsibility](#single-responsibility)
   1. [Named Controllers](#named-controllers)
   1. [Controller as Syntax](#controller-as-syntax)
-  1. [Bindable Members At Top](#bindable-members-at-top)
+  1. [Bindable Members at Top](#bindable-members-at-top)
   1. [File Naming](#file-naming)
+  1. [Defer Logic to Services](#defer-logic-to-services)
+  1. [Single Responsibility](#single-responsibility)
   1. [Linting](#linting)
 
 ## IIFE
@@ -184,6 +184,28 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
   ```javascript
   function() {
     var c = this;
+  }
+  ```
+
+**[Back to top](#table-of-contents)**
+
+## Bindable Members at Top
+
+  Place bindable members at the top of the context in alphabetical order. This makes it easy to read and at a glance you know exactly where to locate functions.
+
+  ```javascript
+  function FeedbackCardController() {
+    var c = this;
+    c.closeSurvey = closeSurvey;
+    c.setRating = setRating;
+
+    function closeSurvey() {
+      /* */
+    }
+
+    function setRating() {
+      /* */
+    }
   }
   ```
 
