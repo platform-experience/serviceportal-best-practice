@@ -42,13 +42,13 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   Do this to define a module.
 
   ```javascript
-    angular.module('pe-timeline', []);
+  angular.module('pe-timeline', []);
   ```
 
   Get instances of the module this way.
 
   ```javascript
-    angular.module('pe-timeline');
+  angular.module('pe-timeline');
   ```
 
   Read more on the topic, from John Papa.
@@ -67,9 +67,9 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   Also, be sure to append the controller name with the suffix Controller. This is a good practice that is commonly used and is descriptive.
 
   ```javascript
-    function PeopleCardController() {
-      var c = this;
-    }
+  function PeopleCardController() {
+    var c = this;
+  }
   ```
 
   Try to avoid this if possible, despite the fact that every time you create a new widget the platform provides you with an anonymous function by default.
