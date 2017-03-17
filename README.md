@@ -16,7 +16,7 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   1. [Defer Logic to Services](#defer-logic-to-services)
   1. [Single Responsibility](#single-responsibility)
   1. [Named Controllers](#named-controllers)
-  1. [ControllerAs Syntax](#controller-as-syntax)
+  1. [Controller as Syntax](#controller-as-syntax)
   1. [Bindable Members At Top](#bindable-members-at-top)
   1. [File Naming](#file-naming)
   1. [Linting](#linting)
@@ -36,8 +36,6 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
       .service('eventsService', eventsService);
   })();
   ```
-
-  - Note: IIFE's are best applied in UI scripts.
 
 **[Back to top](#table-of-contents)**
 
@@ -135,6 +133,34 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
   </ul>
   ```
   - Note: Be careful using one-way data-binding in areas where the data could fluctuate in the future.
+
+**[Back to top](#table-of-contents)**
+
+## Controller as Syntax
+
+  The Controllers as Syntax was introduced in Angular 1.2. Use this syntax instead of $scope inside your controller. Why Controller as?
+
+   * it is a common and best practice
+   * removes scope inheritance issues
+   * eliminates having to inject $scope as a dependency
+   * $scope is phased out in Angular 2 and beyond
+
+  The great thing is every time you create a new widget the platform provides this syntax for you by default.
+
+  ```javascript
+  function() {
+    var c = this;
+    c.isVisible = true;
+  }
+  ```
+
+  Try to avoid this, if possible.
+
+    ```javascript
+  function($scope) {
+    $scope.isVisible = true;
+  }
+  ```
 
 **[Back to top](#table-of-contents)**
 
