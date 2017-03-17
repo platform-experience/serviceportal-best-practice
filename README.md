@@ -4,7 +4,7 @@
 
 A sensible & opinionated Angular style guide for teams using Service Portal.
 
-*Based off of the [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1) by [@john_papa](http://twitter.com/john_papa) and up-to-date with Angular 1.5 components.*
+*Based off of the [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1) by [John Papa](https://johnpapa.net/) and up-to-date with Angular 1.5 components.*
 
 ## Table of Contents
 
