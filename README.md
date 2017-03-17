@@ -39,7 +39,13 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
 ## Modules
 
-  Set a module only once in it's own file.
+  Set a module only once in its own file. Why should I do this?
+
+  John Papa answers this best in his style guide.
+
+  *Separates configuration from module definition, components, and active code. Provides an identifiable place to set configuration for a module.*
+
+  Do this to define a module.
 
   ```javascript
     angular.module('pe-timeline', []);
@@ -50,6 +56,10 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   ```javascript
     angular.module('pe-timeline');
   ```
+
+  Read more on the topic, from John Papa.
+
+  [https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modules-1](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modules-1)
 
 **[Back to top](#table-of-contents)**
 
