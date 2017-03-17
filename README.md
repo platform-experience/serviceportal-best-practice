@@ -25,13 +25,7 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
   ```javascript
   (function() {
-    'use strict';
 
-    function eventsService() {}
-
-    angular
-      .module('pe-timeline')
-      .service('eventsService', eventsService);
   })();
   ```
 
@@ -144,6 +138,31 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
 
 **[Back to top](#table-of-contents)**
 
+## Named Controllers
+
+  Use named controllers instead of anonymous functions. Why named controllers?
+
+   * easier to debug
+   * creates more readable code
+
+  Also, be sure to append the controller name with the suffix Controller. This is a good practice that is commonly used and is descriptive.
+
+  ```javascript
+    function PeopleCardController() {
+      var c = this;
+    }
+  ```
+
+  Try to avoid this if possible, despite the fact that every time you create a new widget the platform provides you with an anonymous function by default.
+
+  ```javascript
+  function() {
+    var c = this;
+  }
+  ```
+
+**[Back to top](#table-of-contents)**
+
 ## Controller as Syntax
 
   The Controllers as Syntax was introduced in Angular 1.2. Use this syntax instead of $scope inside your controller. Why Controller as?
@@ -167,31 +186,6 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
   ```javascript
   function($scope) {
     $scope.isVisible = true;
-  }
-  ```
-
-**[Back to top](#table-of-contents)**
-
-## Named Controllers
-
-  Use named controllers instead of anonymous functions. Why named controllers?
-
-   * easier to debug
-   * creates more readable code
-
-  Also, be sure to append the controller name with the suffix Controller. This is a good practice that is commonly used and is descriptive.
-
-  ```javascript
-    function PeopleCardController() {
-      var c = this;
-    }
-  ```
-
-  Try to avoid this if possible, despite the fact that every time you create a new widget the platform provides you with an anonymous function by default.
-
-  ```javascript
-  function() {
-    var c = this;
   }
   ```
 
