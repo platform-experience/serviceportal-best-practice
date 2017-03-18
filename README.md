@@ -72,7 +72,7 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
   }
   ```
 
-  Try to avoid this if possible, despite the fact that every time you create a new widget the platform provides you with an anonymous function by default.
+  The platform provides you with anonymous functions by default when creating widgets, but if possible try to avoid this.
 
   ```javascript
   function() {
@@ -220,7 +220,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
    * keeps the controller focused and lean
    * promotes reuse via dependency injection
    * reduces repetitive controller logic
-   * ideal for uniting testing and mocking
+   * ideal for unit testing and mocking
 
    Create a service and simply inject it into the controller.
 
