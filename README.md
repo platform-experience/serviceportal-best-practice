@@ -222,7 +222,26 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
    * reduces repetitive controller logic
    * ideal for unit testing and mocking
 
-   Create a service and simply inject it into the controller.
+   Create a service.
+
+  ```javascript
+  (function() {
+    'use strict';
+
+    function eventsService() {
+      var service = {
+        getInitialEvents: getInitialEvents
+      };
+      return service;
+
+      function getInitialEvents() {
+        /* */
+      }
+    }
+  })();
+  ```
+
+  Simply inject that service into the controller.
 
   ```javascript
   function TimelineController(eventsService) {
