@@ -84,12 +84,12 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
 ## Controller as Syntax
 
-  The Controllers as Syntax was introduced in Angular 1.2. Use this syntax instead of $scope inside your controller. Why Controller as?
+  The Controllers as Syntax was introduced in Angular 1.2. Use this syntax instead of `$scope` inside your controller. Why Controller as?
 
    * it is a common and best practice
    * removes scope inheritance issues
-   * eliminates having to inject $scope as a dependency
-   * $scope is phased out in Angular 2 and beyond
+   * eliminates having to inject `$scope` as a dependency
+   * `$scope` is phased out in Angular 2 and beyond
 
   Every time you create a new widget the platform provides this syntax for you by default, which is nice.
 
@@ -134,7 +134,7 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
 ## $onInit
 
-Angular 1.5 brings the $onInit method. This is a good place to put initialization code for your controller. From the documentation:
+Angular 1.5 brings the `$onInit` method. This is a good place to put initialization code for your controller. From the documentation:
 
 *Called on each controller after all the controllers on an element have been constructed and had their bindings initialized (and before the pre & post linking functions for the directives on this element).*
 
@@ -149,7 +149,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
   }
   ```
 
-  Another great use case for utilizing $onInit, is when you need a place to fire off an immediately invoked function.
+  Another great use case for utilizing `$onInit`, is when you need a place to fire off an immediately invoked function.
 
   ```javascript
   c.$onInit = function() {
@@ -162,7 +162,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
 
 ## Components
 
-  Angular 1.5 brings the new .component() helper method, which allows developers to write in an Angular 2 style and makes upgrading to Angular 2 an easier task. Here are the advantages from the Angular documentation:
+  Angular 1.5 brings the new `.component()` helper method, which allows developers to write in an Angular 2 style and makes upgrading to Angular 2 an easier task. Here are the advantages from the Angular documentation:
 
   * simpler configuration than plain directives
   * promote sane defaults and best practices
@@ -209,7 +209,7 @@ Angular 1.5 brings the $onInit method. This is a good place to put initializatio
     <li ng-repeat="user in ::c.users"></li>
   </ul>
   ```
-  - Note: Be careful using one-way data-binding in areas where the data could fluctuate in the future.
+  - Note: Be careful using one-way bindings in areas where the data could fluctuate in the future.
 
 **[Back to top](#table-of-contents)**
 
