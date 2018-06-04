@@ -1,10 +1,12 @@
-# Service Portal: Angular Style Guide
+# Service Portal: AngularJS Style Guide
 
 ## Purpose
 
-A sensible & opinionated Angular style guide for teams using Service Portal.
+A sensible & opinionated AngularJS style guide for teams using Service Portal.
 
-*Based off of the [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1) by [John Papa](https://johnpapa.net/) and up-to-date with Angular 1.5 components.*
+*Based off of the [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/tree/master/a1) by [John Papa](https://johnpapa.net/) and up-to-date with AngularJS 1.5 components.*
+
+> Note: The original version of Angular is officially called AngularJS; this includes all versions of Angular starting with 1. The current version of Angular is simply called Angular, which includes versions 2 and beyond and will be referred to as such in this guide.
 
 ## Table of Contents
 
@@ -37,7 +39,7 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
   John Papa answers this best in his style guide.
 
-  *Separates configuration from module definition, components, and active code. Provides an identifiable place to set configuration for a module.*
+  > Separates configuration from module definition, components, and active code. Provides an identifiable place to set configuration for a module.
 
   Do this to define a module.
 
@@ -84,12 +86,12 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
 ## Controller as Syntax
 
-  The Controllers as Syntax was introduced in Angular 1.2. Use this syntax instead of `$scope` inside your controller. Why Controller as?
+  The Controllers as Syntax was introduced in AngularJS 1.2. Use this syntax instead of `$scope` inside your controller. Why Controller as?
 
    * it is a common and best practice
    * removes scope inheritance issues
    * eliminates having to inject `$scope` as a dependency
-   * `$scope` is phased out in Angular 2 and beyond
+   * `$scope` is phased out in Angular
 
   Every time you create a new widget the platform provides this syntax for you by default, which is nice.
 
@@ -134,9 +136,9 @@ A sensible & opinionated Angular style guide for teams using Service Portal.
 
 ## $onInit
 
-Angular 1.5 brings the `$onInit` method. This is a good place to put initialization code for your controller. From the documentation:
+  AngularJS 1.5 brings the `$onInit` method. This is a good place to put initialization code for your controller. From the documentation:
 
-*Called on each controller after all the controllers on an element have been constructed and had their bindings initialized (and before the pre & post linking functions for the directives on this element).*
+  > Called on each controller after all the controllers on an element have been constructed and had their bindings initialized (and before the pre & post linking functions for the directives on this element).
 
   ```javascript
   function TabSelectionController() {
@@ -162,12 +164,12 @@ Angular 1.5 brings the `$onInit` method. This is a good place to put initializat
 
 ## Components
 
-  Angular 1.5 brings the new `.component()` helper method, which allows developers to write in an Angular 2 style and makes upgrading to Angular 2 an easier task. Here are the advantages from the Angular documentation:
+  AngularJS 1.5 brings the new `.component()` helper method, which allows developers to write in a modern Angular style and makes upgrading to the new framework an easier task. Here are the advantages from the AngularJS documentation:
 
-  * simpler configuration than plain directives
-  * promote sane defaults and best practices
-  * optimized for component-based architecture
-  * writing component directives will make it easier to upgrade to Angular 2
+  > * simpler configuration than plain directives
+  > * promote sane defaults and best practices
+  > * optimized for component-based architecture
+  > * writing component directives will make it easier to upgrade to Angular
 
   ```javascript
   (function() {
@@ -194,9 +196,9 @@ Angular 1.5 brings the `$onInit` method. This is a good place to put initializat
 
 ## One-way Binding
 
-  Angular 1.3 delivered a new performance enhancing feature called one-time binding. From the Angular documentation:
+  AngularJS 1.3 delivered a new performance enhancing feature called one-time binding. From the AngularJS documentation:
 
-  *One-time expressions will stop recalculating once they are stable, which happens after the first digest if the expression result is a non-undefined value.*
+  > One-time expressions will stop recalculating once they are stable, which happens after the first digest if the expression result is a non-undefined value.
 
   ```html
   <div class="panel-heading">{{::options.title}}</div>
@@ -228,7 +230,7 @@ Angular 1.5 brings the `$onInit` method. This is a good place to put initializat
   (function() {
     'use strict';
 
-    function eventsService() {
+    function eventService() {
       var service = {
         getInitialEvents: getInitialEvents
       };
@@ -244,17 +246,16 @@ Angular 1.5 brings the `$onInit` method. This is a good place to put initializat
   Simply inject that service into the controller.
 
   ```javascript
-  function TimelineController(eventsService) {
+  function TimelineController(eventService) {
     var c = this;
 
     c.$onInit = function() {
-      c.initialEvents = eventsService.getInitialEvents();
+      c.initialEvents = eventService.getInitialEvents();
     };
   }
   ```
 
   Read more on the topic, from the man John Papa.
-
   [https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#defer-controller-logic-to-services](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#defer-controller-logic-to-services)
 
 **[Back to top](#table-of-contents)**
