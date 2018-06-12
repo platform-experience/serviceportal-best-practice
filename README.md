@@ -19,7 +19,7 @@ A sensible & opinionated AngularJS style guide for teams using Service Portal.
   1. [Components](#components)
   1. [One-way Binding](#one-way-binding)
   1. [Defer Logic to Services](#defer-logic-to-services)
-  1. [File Naming Convention](#file-naming-convention)
+  1. [Small Functions](#small-functions)
 
 ## IIFE
 
@@ -211,7 +211,8 @@ A sensible & opinionated AngularJS style guide for teams using Service Portal.
     <li ng-repeat="user in ::c.users"></li>
   </ul>
   ```
-  - Note: Be careful using one-way bindings in areas where the data could fluctuate in the future.
+
+  Note: Be careful using one-way bindings in areas where the data could fluctuate in the future.
 
 **[Back to top](#table-of-contents)**
 
@@ -256,34 +257,21 @@ A sensible & opinionated AngularJS style guide for teams using Service Portal.
   ```
 
   Read more on the topic, from the man John Papa.
+
   [https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#defer-controller-logic-to-services](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#defer-controller-logic-to-services)
 
 **[Back to top](#table-of-contents)**
 
-## File Naming Convention
+## Small Functions
 
-  Keep it simple by going lowercase with dashes. Use the feature or widget to name the file, separated by a period with the file type following it and ending with the file extension. Why?
+  Write small functions; less than 20 lines of code is ideal. Abstract large functions to smaller ones. Why?
 
-   * consistency
-   * makes finding your code faster
-   * ease of understanding
+   * produces more readable code
+   * easier to maintain
+   * promotes code reuse
 
-  Here are a list of examples.
+  Note: Widget Server script abstraction can easily be achieved using methods from Script includes. Read more on Script includes from the ServiceNow documentation.
 
-  ```
-  people-card.server.js
-  people-card.module.js
-  people-card.component.js
-  people-card.service.js
-  people-card.directive.js
-  people-card.filter.js
-  people-card.spec.js
-  people-card.html
-  people-card.scss
-  ```
-
-  Read more on the topic, from Mr. Papa.
-
-  [https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#naming](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#naming)
+  [https://docs.servicenow.com/bundle/kingston-application-development/page/script/server-scripting/concept/c_ScriptIncludes.html](https://docs.servicenow.com/bundle/kingston-application-development/page/script/server-scripting/concept/c_ScriptIncludes.html)
 
 **[Back to top](#table-of-contents)**
